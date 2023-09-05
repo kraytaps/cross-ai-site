@@ -13,7 +13,7 @@ export default function GetEarlyAccessSection() {
 						actionable insights. We help you harness the power of AI
 						to make your business more efficient and competitive.
 					</p>
-					<GetStartedButton type="primary" text="Get early access" />
+					<GetStartedButton type="primary" text="Get started" />
 				</div>
 			</div>
 		</div>
