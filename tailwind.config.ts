@@ -26,6 +26,7 @@ const config: Config = {
 				"white-3": "#8B84C9",
 				"grey-0": "#908DB1",
 				"grey-1": "#2B2940",
+				"grey-2": "#181728",
 				"black-0": "#1A192E",
 				"black-0-hover": "#28263F",
 				"black-1": "#080719",

@@ -13,12 +13,12 @@ import EllipseBlurGroup from "../assets/ellipse-blur-group.png";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col w-full text-white-0 text-sm md:text-base">
+		<main className="flex flex-col w-full text-sm text-white-0 md:text-base">
 			<Navbar />
 
 			<section className="relative flex flex-col items-center min-h-screen px-5 md:px-10">
 				<div className="flex flex-col-reverse items-center justify-center h-screen max-w-screen-xl min-h-screen py-10 md:flex-row md:justify-between">
-					<div className="flex flex-col items-center md:w-[50%] md:items-start gap-6">
+					<div className="flex flex-col items-center md:w-[50%] md:items-start gap-5">
 						<h1 className="text-3xl font-semibold text-center md:text-5xl md:text-left">
 							We transform businesses by leading them through the{" "}
 							<span className="text-transparent bg-clip-text bg-gradient-to-b from-white-1 to-white-3">
@@ -49,7 +49,7 @@ export default function Home() {
 
 			<section className="relative flex flex-col items-center px-5 md:px-10">
 				<div className="flex flex-col items-center justify-center max-w-screen-xl max-h-screen gap-10 py-20 md:flex-row md:justify-between">
-					<div className="flex flex-col items-start gap-4 md:w-[35%]">
+					<div className="flex flex-col items-start gap-5 md:w-[35%]">
 						<div className="px-4 py-2 font-mono text-sm border-2 rounded-full border-purple-2 bg-black-1">
 							<p className="text-transparent bg-clip-text bg-gradient-to-tr from-purple-pink-grad-0 to-purple-pink-grad-1">
 								[ALPHA] IRIS
@@ -81,7 +81,9 @@ export default function Home() {
 					/>
 				</div>
 			</section>
+
 			<GetEarlyAccessSection />
+
 			<Footer />
 		</main>
 	);
