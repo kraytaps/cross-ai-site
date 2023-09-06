@@ -55,7 +55,7 @@ export default function About() {
 								ABOUT US
 							</p>
 						</div>
-						<h1 className="text-4xl text-center font-semibold md:text-5xl">
+						<h1 className="text-3xl text-center font-semibold md:text-5xl">
 							Your trusted partners in AI-driven business
 							transformation.
 						</h1>
@@ -87,7 +87,7 @@ export default function About() {
 								OUR MISSION
 							</p>
 						</div>
-						<h1 className="text-4xl text-center font-semibold md:text-5xl">
+						<h1 className="text-3xl text-center font-semibold md:text-5xl">
 							Our mission is to help businesses cross the AI
 							frontier.
 						</h1>
@@ -99,7 +99,6 @@ export default function About() {
 							navigating the rapidly evolving landscape of
 							artificial intelligence.
 						</p>
-						<GetStartedButton type="primary" />
 					</div>
 				</div>
 			</section>

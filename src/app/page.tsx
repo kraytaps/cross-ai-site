@@ -19,7 +19,7 @@ export default function Home() {
 			<section className="relative flex flex-col items-center min-h-screen px-5 md:px-10">
 				<div className="flex flex-col-reverse items-center justify-center h-screen max-w-screen-xl min-h-screen py-10 md:flex-row md:justify-between">
 					<div className="flex flex-col items-center md:w-[50%] md:items-start gap-6">
-						<h1 className="text-4xl font-semibold text-center md:text-5xl md:text-left">
+						<h1 className="text-3xl font-semibold text-center md:text-5xl md:text-left">
 							We transform businesses by leading them through the{" "}
 							<span className="text-transparent bg-clip-text bg-gradient-to-b from-white-1 to-white-3">
 								AI frontier.
@@ -55,7 +55,7 @@ export default function Home() {
 								[ALPHA] IRIS
 							</p>
 						</div>
-						<h1 className="text-4xl font-semibold md:text-5xl">
+						<h1 className="text-3xl font-semibold md:text-5xl">
 							Transforming Data Chaos Into Clarity
 						</h1>
 						<p className="font-medium text-left text-grey-0 md:text-left">
