@@ -7,8 +7,8 @@ export default function Navbar() {
 	const links = [{ path: "/about", label: "About" }];
 
 	return (
-		<div className="fixed flex flex-col items-center min-w-full px-10 z-50">
-			<div className="flex flex-row justify-between w-full max-w-screen-xl py-10">
+		<div className="fixed flex flex-col items-center min-w-full px-5 md:px-10 z-50">
+			<div className="flex flex-row justify-between w-full max-w-screen-xl py-5 md:py-10">
 				<Link href="/" className="flex flex-col justify-center">
 					<Image src={CrossLogo} alt="" />
 				</Link>
