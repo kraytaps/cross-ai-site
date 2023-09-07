@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 import EllipseBlurGroup from "@/assets/ellipse-blur-group.png";
 import XLogoHue from "@/assets/x-logo-hue.jpg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function GetStarted() {
 	const firstNameRef = useRef<HTMLInputElement>(null);
@@ -15,17 +16,31 @@ export default function GetStarted() {
 	const phoneRef = useRef<HTMLInputElement>(null);
 	const emailRef = useRef<HTMLInputElement>(null);
 
-	const [message, setMessage] = useState("");
+	const [successMessage, setSuccessMessage] =
+		useState<MembersSuccessResponse>();
+	const [errorMessage, setErrorMessage] = useState("");
+
+	useEffect(() => {
+		if (successMessage) {
+			console.log(successMessage);
+		}
+	}, [successMessage]);
+
+	useEffect(() => {
+		if (errorMessage) {
+			console.log(errorMessage);
+		}
+	}, [errorMessage]);
 
 	const subscribe = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-
+		console.log("attempting to hit subscription API");
 		const res = await fetch("/api/subscribe", {
 			body: JSON.stringify({
 				firstName: firstNameRef.current?.value,
 				lastName: lastNameRef.current?.value,
 				companyName: companyNameRef.current?.value,
-				phone: phoneRef.current?.value,
+				phoneNumber: phoneRef.current?.value,
 				email: emailRef.current?.value,
 			}),
 			headers: {
@@ -34,19 +49,17 @@ export default function GetStarted() {
 			method: "POST",
 		});
 
-		const { error } = await res.json();
+		const data = await res.json();
+		console.log(data);
 
-		if (error) {
-			setMessage(error);
+		if (data.error) {
+			setErrorMessage(data.error);
+			setSuccessMessage(undefined);
 			return;
 		}
 
-		if (firstNameRef.current) firstNameRef.current.value = "";
-		if (lastNameRef.current) lastNameRef.current.value = "";
-		if (companyNameRef.current) companyNameRef.current.value = "";
-		if (phoneRef.current) phoneRef.current.value = "";
-		if (emailRef.current) emailRef.current.value = "";
-		setMessage("Success! 🎉 You are now subscribed to the newsletter.");
+		setSuccessMessage(data);
+		setErrorMessage("");
 	};
 
 	return (
@@ -85,6 +98,7 @@ export default function GetStarted() {
 											ref={firstNameRef}
 											autoComplete="given-name"
 											placeholder="Jane"
+											required
 											className="bg-transparent text-sm p-2 block w-full rounded-md border-grey-2 border-2 py-1.5 placeholder:text-grey-0 focus:ring-2 focus:ring-inset focus:ring-offset-purple-0"
 										/>
 									</div>
@@ -105,6 +119,7 @@ export default function GetStarted() {
 											ref={lastNameRef}
 											autoComplete="family-name"
 											placeholder="Doe"
+											required
 											className="bg-transparent text-sm p-2 block w-full rounded-md border-grey-2 border-2 py-1.5 placeholder:text-grey-0 focus:ring-2 focus:ring-inset focus:ring-offset-purple-0"
 										/>
 									</div>
@@ -125,6 +140,7 @@ export default function GetStarted() {
 											ref={companyNameRef}
 											autoComplete="company-name"
 											placeholder="Company"
+											required
 											className="bg-transparent text-sm p-2 block w-full rounded-md border-grey-2 border-2 py-1.5 placeholder:text-grey-0 focus:ring-2 focus:ring-inset focus:ring-offset-purple-0"
 										/>
 									</div>
@@ -165,21 +181,37 @@ export default function GetStarted() {
 											ref={emailRef}
 											autoComplete="email"
 											placeholder="janedoe@gmail.com"
+											required
 											className="bg-transparent text-sm p-2 block w-full rounded-md border-grey-2 border-2 py-1.5 placeholder:text-grey-0 focus:ring-2 focus:ring-inset focus:ring-offset-purple-0"
 										/>
 									</div>
 								</div>
 							</div>
 						</div>
-						<button
-							type="submit"
-							className={`px-4 py-2.5 rounded-md bg-purple-0 font-semibold hover:bg-purple-0-hover hover:cursor-pointer transition-all duration-300`}
-						>
-							Sign up
-						</button>
+						<div className="flex flex-row">
+							<button
+								type="submit"
+								className={`px-4 py-2.5 rounded-md bg-purple-0 font-semibold hover:bg-purple-0-hover hover:cursor-pointer transition-all duration-300`}
+							>
+								Sign up
+							</button>
+							<div className="relative">
+								{(successMessage || errorMessage) && (
+									<div className="flex flex-row px-4 p-2.5">
+										{successMessage ? (
+											// eslint-disable-next-line react/no-unescaped-entities
+											<p>🎉 You're subscribed!</p>
+										) : (
+											// eslint-disable-next-line react/no-unescaped-entities
+											<p>🤝 You're already subscribed!</p>
+										)}
+									</div>
+								)}
+							</div>
+						</div>
 					</form>
 
-					<div className="flex flex-row items-center overflow-hidden max-h-[40vh] md:h-auto md:max-h-none md:w-[40%] rounded-xl md:self-stretch lg:self-center">
+					<div className="flex flex-row items-center overflow-hidden max-h-[40vh] md:h-auto md:max-h-none md:w-[40%] rounded-xl md:self-stretch xl:self-center">
 						<Image
 							src={XLogoHue}
 							className="object-cover w-full h-full "
