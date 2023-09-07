@@ -10,12 +10,6 @@ import Navbar from "@/components/Navbar";
 import EllipseBlurGroup from "@/assets/ellipse-blur-group.png";
 import XLogoHue from "@/assets/x-logo-hue.jpg";
 
-export const metadata: Metadata = {
-	title: "Cross AI - Get Early Access",
-	description:
-		"Cross AI bridges the gap between your data and actionable insights. We lead your business through the AI frontier and transform it by harnessing the power of AI.",
-};
-
 export default function GetStarted() {
 	const firstNameRef = useRef<HTMLInputElement>(null);
 	const lastNameRef = useRef<HTMLInputElement>(null);
