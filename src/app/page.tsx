@@ -42,7 +42,7 @@ export default function Home() {
 				</div>
 				<Image
 					src={EllipseBlurGroup}
-					className="absolute bottom-0 object-cover h-full md:top-auto md:bottom-auto md:right-0 -z-10"
+					className="absolute bottom-0 h-full md:top-auto md:bottom-auto md:right-0 -z-10"
 					alt=""
 				/>
 			</section>
