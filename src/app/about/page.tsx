@@ -10,13 +10,13 @@ import GetEarlyAccessSection from "@/components/GetEarlyAccessSection";
 import Footer from "@/components/Footer";
 import GetStartedButton from "@/components/GetStartedButton";
 
-import EllipseBlurGroup from "../../assets/ellipse-blur-group.png";
-import EllipseBlur1 from "../../assets/ellipse-blur-1.png";
-import Discussion from "../../assets/discussion.png";
-import Whiteboard from "../../assets/whiteboard.png";
-import Pinboard from "../../assets/pinboard.png";
-import Laptop from "../../assets/laptop.png";
-import Empowering from "../../assets/empowering-businesses.png";
+import EllipseBlurGroup from "@/assets/ellipse-blur-group.png";
+import EllipseBlur1 from "@/assets/ellipse-blur-1.png";
+import Discussion from "@/assets/discussion.png";
+import Whiteboard from "@/assets/whiteboard.png";
+import Pinboard from "@/assets/pinboard.png";
+import Laptop from "@/assets/laptop.png";
+import Empowering from "@/assets/empowering-businesses.png";
 
 export default function About() {
 	const ref = useRef(null);
@@ -113,31 +113,50 @@ export default function About() {
 							style={{ y: yPinboard }}
 							className="flex relative w-[25%]"
 						>
-							<Image src={Pinboard} alt="" loading="eager" />
+							<Image
+								src={Pinboard}
+								alt=""
+								loading="eager"
+							/>
 						</motion.div>
 						<motion.div
 							style={{ y: yLaptop }}
 							className="flex relative w-[25%]"
 						>
-							<Image src={Laptop} alt="" loading="eager" />
+							<Image
+								src={Laptop}
+								alt=""
+								loading="eager"
+							/>
 						</motion.div>
 						<motion.div
 							style={{ y: yEmpowering }}
 							className="flex w-[25%]"
 						>
-							<Image src={Empowering} alt="" loading="eager" />
+							<Image
+								src={Empowering}
+								alt=""
+								loading="eager"
+							/>
 						</motion.div>
 						<motion.div
 							style={{ y: yWhiteboard }}
 							className="flex w-[25%]"
 						>
-							<Image src={Whiteboard} alt="" loading="eager" />
+							<Image
+								src={Whiteboard}
+								alt=""
+								loading="eager"
+							/>
 						</motion.div>
 						<motion.div
 							style={{ y: yDiscussion }}
 							className="flex w-[25%]"
 						>
-							<Image src={Discussion} alt="" />
+							<Image
+								src={Discussion}
+								alt=""
+							/>
 						</motion.div>
 					</div>
 					<Image
