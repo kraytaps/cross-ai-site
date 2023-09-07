@@ -7,9 +7,9 @@ import GetEarlyAccessSection from "@/components/GetEarlyAccessSection";
 import Footer from "@/components/Footer";
 
 import Scene from "@/components/Scene";
-import DataChaosImg from "../assets/data-chaos.png";
-import EllipseBlur1 from "../assets/ellipse-blur-1.png";
-import EllipseBlurGroup from "../assets/ellipse-blur-group.png";
+import DataChaosImg from "@/assets/data-chaos.png";
+import EllipseBlur1 from "@/assets/ellipse-blur-1.png";
+import EllipseBlurGroup from "@/assets/ellipse-blur-group.png";
 
 export default function Home() {
 	return (
