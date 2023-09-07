@@ -113,50 +113,31 @@ export default function About() {
 							style={{ y: yPinboard }}
 							className="flex relative w-[25%]"
 						>
-							<Image
-								src={Pinboard}
-								alt=""
-								loading="eager"
-							/>
+							<Image src={Pinboard} alt="" loading="eager" />
 						</motion.div>
 						<motion.div
 							style={{ y: yLaptop }}
 							className="flex relative w-[25%]"
 						>
-							<Image
-								src={Laptop}
-								alt=""
-								loading="eager"
-							/>
+							<Image src={Laptop} alt="" loading="eager" />
 						</motion.div>
 						<motion.div
 							style={{ y: yEmpowering }}
 							className="flex w-[25%]"
 						>
-							<Image
-								src={Empowering}
-								alt=""
-								loading="eager"
-							/>
+							<Image src={Empowering} alt="" loading="eager" />
 						</motion.div>
 						<motion.div
 							style={{ y: yWhiteboard }}
 							className="flex w-[25%]"
 						>
-							<Image
-								src={Whiteboard}
-								alt=""
-								loading="eager"
-							/>
+							<Image src={Whiteboard} alt="" loading="eager" />
 						</motion.div>
 						<motion.div
 							style={{ y: yDiscussion }}
 							className="flex w-[25%]"
 						>
-							<Image
-								src={Discussion}
-								alt=""
-							/>
+							<Image src={Discussion} alt="" />
 						</motion.div>
 					</div>
 					<Image

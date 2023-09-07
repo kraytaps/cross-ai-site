@@ -39,12 +39,12 @@ export default function Home() {
 					<div className="flex flex-col h-full md:w-[50%]">
 						<Scene />
 					</div>
-					<Image
-						src={EllipseBlurGroup}
-						className="absolute bottom-0 object-cover h-full md:top-auto md:bottom-auto md:right-0 -z-10"
-						alt=""
-					/>
 				</div>
+				<Image
+					src={EllipseBlurGroup}
+					className="absolute bottom-0 object-cover h-full md:top-auto md:bottom-auto md:right-0 -z-10"
+					alt=""
+				/>
 			</section>
 
 			<section className="relative flex flex-col items-center px-5 md:px-10">
@@ -74,12 +74,12 @@ export default function Home() {
 							alt="data chaos data aggregation"
 						/>
 					</div>
-					<Image
-						src={EllipseBlur1}
-						className="absolute bottom-0 object-cover md:bottom-auto md:right-0 -z-10"
-						alt=""
-					/>
 				</div>
+				<Image
+					src={EllipseBlur1}
+					className="absolute bottom-0 object-cover md:bottom-auto md:right-0 -z-10"
+					alt=""
+				/>
 			</section>
 
 			<GetEarlyAccessSection />
